@@ -17,11 +17,6 @@ const loadImages = () => {
   const projectPlusIcon = new Image();
   projectPlusIcon.src = plusImage;
   projectAddBtn.appendChild(projectPlusIcon);
-
-  const projectDeleteBtn = document.querySelector('.proj-delete');
-  const projectDeleteIcon = new Image();
-  projectDeleteIcon.src = deleteImage;
-  projectDeleteBtn.appendChild(projectDeleteIcon);
 };
 
 export { loadImages };
