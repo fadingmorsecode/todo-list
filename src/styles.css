@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --inter: 'Inter', sans-serif;
+  --dela: 'Dela Gothic One', cursive;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom, #000000, #333333);
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template: 1fr 8fr / 2fr 7fr;
+  gap: 1.2rem;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f3f5;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border-radius: 0 0 15px 15px;
+  gap: 20px;
+}
+
+.logo-text {
+  font-size: 3rem;
+  font-family: var(--inter);
+  font-weight: 500;
+}
+
+.logo-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img > img {
+  width: 3.5rem;
+}
+
+.side-bar {
+  border: solid 5px #f0f3f5;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  padding: 10px;
+  gap: 15px;
+}
+
+.inbox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  border: solid 2px #f0f3f5;
+}
+
+.inbox > p {
+  font-family: var(--inter);
+  font-size: 3rem;
+  color: #8a4fff;
+  padding: 5px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  border: solid 5px #f0f3f5;
+  border-radius: 15px 15px 0 0;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  padding: 10px;
+}
+
+.content-header,
+.new-projects-container {
+  display: flex;
+  gap: 15px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  height: 4rem;
+  width: 100%;
+}
+
+.new-task-txt,
+.new-projects-container > p {
+  font-family: var(--inter);
+  font-size: 2rem;
+}
+
+.new-task-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-task-btn > img,
+.project-add-btn > img {
+  width: 30px;
+}
+
+.new-task-btn > img:hover,
+.project-add-btn > img:hover {
+  transform: scale(1.2);
+}
+
+.project-add-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
