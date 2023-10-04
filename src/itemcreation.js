@@ -1,5 +1,6 @@
+// Default state of of checked status is unchecked.
 const todo = (title, description, dueDate, notes) => {
-  return { title, description, dueDate, notes, logValues };
+  return { title, description, dueDate, notes, checkState: 'unchecked' };
 };
 
 const createTodo = () => {
@@ -8,6 +9,7 @@ const createTodo = () => {
   const dueDate = prompt('Enter the due date');
   const notes = prompt('Enter notes');
   const newTodo = todo(title, description, dueDate, notes);
+  return newTodo;
 };
 
 export { createTodo };
