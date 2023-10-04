@@ -5,4 +5,7 @@ import { createTodo } from './itemcreation';
 const todoContainer = [];
 
 loadImages();
-createTodo();
+
+todoContainer.push(createTodo());
+
+console.log(todoContainer);
