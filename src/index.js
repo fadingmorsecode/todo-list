@@ -1,11 +1,10 @@
 import './styles.css';
 import { loadImages } from './imageloader';
 import { createTodo } from './itemcreation';
-
-const todoContainer = [];
+import { storageContainers } from './storage';
 
 loadImages();
 
-todoContainer.push(createTodo());
+createTodo();
 
-console.log(todoContainer);
+storageContainers.displayTodoContainer();

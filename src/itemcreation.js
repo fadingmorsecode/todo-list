@@ -1,3 +1,5 @@
+import { storageContainers } from './storage';
+
 // Default state of of checked status is unchecked.
 const todo = (title, description, dueDate, priority, notes, project) => {
   return {
@@ -25,7 +27,7 @@ const createTodo = () => {
   const notes = prompt('Enter notes');
   const project = prompt('Enter desired project');
   const newTodo = todo(title, description, dueDate, priority, notes, project);
-  return newTodo;
+  storageContainers.addTodo(newTodo);
 };
 
 export { createTodo };
