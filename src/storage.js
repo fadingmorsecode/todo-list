@@ -10,14 +10,15 @@ const storageContainers = (function () {
     _projectContainer.push(project);
   };
 
-  const displayTodoContainer = function () {
+  const displayContainers = function () {
     console.log(_todoContainer);
+    console.log(_projectContainer);
   };
 
   return {
     addTodo,
     addProject,
-    displayTodoContainer,
+    displayContainers,
   };
 })();
 
