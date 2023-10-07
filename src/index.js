@@ -6,6 +6,6 @@ import { storageContainers } from './storage';
 
 loadImages();
 
-createProject();
+createTodo();
 
 storageContainers.displayContainers();

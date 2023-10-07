@@ -13,6 +13,14 @@ const todo = (title, description, dueDate, priority, notes, project) => {
   };
 };
 
+todo.prototype.toggleCheck = function () {
+  if (this.checkState === 'unchecked') {
+    this.checkState = 'checked';
+  } else {
+    this.checkState = 'unchecked';
+  }
+};
+
 const priorities = ['low', 'medium', 'high'];
 
 const createTodo = () => {

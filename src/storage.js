@@ -1,6 +1,6 @@
 const storageContainers = (function () {
-  const _todoContainer = [];
-  const _projectContainer = [];
+  const todoContainer = [];
+  const projectContainer = [];
 
   const addTodo = function (todo) {
     _todoContainer.push(todo);
@@ -18,6 +18,8 @@ const storageContainers = (function () {
   return {
     addTodo,
     addProject,
+    todoContainer,
+    projectContainer,
     displayContainers,
   };
 })();
