@@ -9,3 +9,7 @@ loadImages();
 createTodo();
 
 storageContainers.displayContainers();
+
+storageContainers.todoContainer[0].toggleCheck();
+
+console.log(storageContainers.todoContainer[0]);

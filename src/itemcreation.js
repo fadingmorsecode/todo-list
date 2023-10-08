@@ -2,6 +2,9 @@ import { storageContainers } from './storage';
 
 // Default state of of checked status is unchecked.
 const todo = (title, description, dueDate, priority, notes, project) => {
+  const toggleCheck = function () {
+    this.checkState = !this.checkState;
+  };
   return {
     title,
     description,
@@ -9,16 +12,9 @@ const todo = (title, description, dueDate, priority, notes, project) => {
     notes,
     priority,
     project,
+    toggleCheck,
     checkState: 'unchecked',
   };
-};
-
-todo.prototype.toggleCheck = function () {
-  if (this.checkState === 'unchecked') {
-    this.checkState = 'checked';
-  } else {
-    this.checkState = 'unchecked';
-  }
 };
 
 const priorities = ['low', 'medium', 'high'];
