@@ -9,14 +9,12 @@ const todo = (title, description, dueDate, priority, notes, project) => {
     notes,
     priority,
     project,
-    checkState: 'unchecked',
+    checkState: false,
     toggleCheck: function () {
-      if (this.checkState === 'unchecked') {
-        this.checkState = 'checked';
-        console.log('i have been checked');
+      if (this.checkState === false) {
+        this.checkState = true;
       } else {
-        this.checkState = 'unchecked';
-        console.log('i have been unchecked');
+        this.checkState = false;
       }
     },
   };
