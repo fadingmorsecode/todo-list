@@ -1,13 +1,13 @@
 import './styles.css';
-import { loadImages } from './imageloader';
-import { createTodo } from './itemcreation';
-import { createProject } from './projectcreation';
-import { storageContainers } from './storage';
+import { loadImages } from './modules/imageloader';
+import { createTodo } from './modules/itemcreation';
+import { createProject } from './modules/projectcreation';
+import { storageContainers } from './modules/storage';
 
 createTodo();
 
-console.log(storageContainers.todoContainer[0]);
+console.log(JSON.stringify(storageContainers.todoContainer[0]));
 
 storageContainers.todoContainer[0].toggleCheck();
 
-console.log(storageContainers.todoContainer[0]);
+console.log(JSON.stringify(storageContainers.todoContainer[0]));
