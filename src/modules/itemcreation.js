@@ -29,7 +29,7 @@ const createTodo = () => {
   const dueDate = '10/07/2025';
   const priority = priorities[0];
   const notes = 'test notes';
-  const project = 'test project';
+  const project = 'homework';
   const newTodo = new todo(
     title,
     description,
@@ -41,4 +41,40 @@ const createTodo = () => {
   storageContainers.addTodo(newTodo);
 };
 
-export { createTodo };
+const createSecondTodo = () => {
+  const title = 'jamiroquai';
+  const description = 'the best!';
+  const dueDate = '10/20/2025';
+  const priority = priorities[1];
+  const notes = 'test notes';
+  const project = 'music';
+  const newTodo = new todo(
+    title,
+    description,
+    dueDate,
+    priority,
+    notes,
+    project
+  );
+  storageContainers.addTodo(newTodo);
+};
+
+const createThirdTodo = () => {
+  const title = 'mac demarco';
+  const description = 'soooo good!';
+  const dueDate = '10/15/2025';
+  const priority = priorities[2];
+  const notes = 'test notes';
+  const project = 'music';
+  const newTodo = new todo(
+    title,
+    description,
+    dueDate,
+    priority,
+    notes,
+    project
+  );
+  storageContainers.addTodo(newTodo);
+};
+
+export { createTodo, createSecondTodo, createThirdTodo };
