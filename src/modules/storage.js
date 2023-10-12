@@ -18,11 +18,6 @@ const storageContainers = (function () {
     projectContainer.splice(index, 1);
   };
 
-  const displayContainers = function () {
-    console.log(todoContainer);
-    console.log(projectContainer);
-  };
-
   return {
     addTodo,
     addProject,
