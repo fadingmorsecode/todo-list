@@ -26,3 +26,9 @@ console.log(JSON.stringify(storageContainers.todoContainer));
 storageContainers.deleteTodo(1);
 
 console.log(JSON.stringify(storageContainers.todoContainer));
+
+console.log(JSON.stringify(storageContainers.projectContainer));
+
+storageContainers.deleteProject(0);
+
+console.log(JSON.stringify(storageContainers.projectContainer));
