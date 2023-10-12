@@ -23,7 +23,6 @@ const storageContainers = (function () {
     addProject,
     todoContainer,
     projectContainer,
-    displayContainers,
     deleteTodo,
     deleteProject,
   };
