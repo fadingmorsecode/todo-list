@@ -10,6 +10,10 @@ const storageContainers = (function () {
     projectContainer.push(project);
   };
 
+  const deleteTodo = function (index) {
+    todoContainer.splice(index, 1);
+  };
+
   const displayContainers = function () {
     console.log(todoContainer);
     console.log(projectContainer);
@@ -21,6 +25,7 @@ const storageContainers = (function () {
     todoContainer,
     projectContainer,
     displayContainers,
+    deleteTodo,
   };
 })();
 

@@ -20,3 +20,9 @@ storageContainers.todoContainer[0].toggleCheck();
 console.log(JSON.stringify(storageContainers.todoContainer[0]));
 
 console.log(filterProject('music'));
+
+console.log(JSON.stringify(storageContainers.todoContainer));
+
+storageContainers.deleteTodo(1);
+
+console.log(JSON.stringify(storageContainers.todoContainer));
