@@ -15,10 +15,18 @@ createTodo();
 createSecondTodo();
 createThirdTodo();
 
-console.log(JSON.stringify(storageContainers.projectContainer));
-console.log(JSON.stringify(storageContainers.todoContainer));
+console.log(`Console.log:`);
+console.log(storageContainers.todoContainer);
+console.log(storageContainers.projectContainer);
 
+console.log('Method logging:');
+storageContainers.logContainers();
+
+//Delete Project (homework)
 storageContainers.deleteProject(1);
 
-console.log(JSON.stringify(storageContainers.projectContainer));
-console.log(JSON.stringify(storageContainers.todoContainer));
+console.log(`Console.log:`);
+console.log(storageContainers.todoContainer);
+console.log(storageContainers.projectContainer);
+console.log('Method logging:');
+storageContainers.logContainers();

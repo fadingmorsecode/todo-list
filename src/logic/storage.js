@@ -28,6 +28,11 @@ const storageContainers = (function () {
     projectContainer.splice(index, 1);
   };
 
+  const logContainers = function () {
+    console.log(todoContainer);
+    console.log(projectContainer);
+  };
+
   const editTodo = function (
     index,
     newTitle,
@@ -65,6 +70,7 @@ const storageContainers = (function () {
     deleteProject,
     editTodo,
     editProject,
+    logContainers,
   };
 })();
 
