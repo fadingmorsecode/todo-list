@@ -1,6 +1,6 @@
 const storageContainers = (function () {
-  const todoContainer = [];
-  const projectContainer = [];
+  let todoContainer = [];
+  const projectContainer = ['music', 'homework'];
 
   const addTodo = function (todo) {
     todoContainer.push(todo);
@@ -15,6 +15,16 @@ const storageContainers = (function () {
   };
 
   const deleteProject = function (index) {
+    const projectName = projectContainer[index];
+    const toBeFiltered = [];
+    todoContainer.forEach((todo) => {
+      if (todo['project'] === projectName) {
+        toBeFiltered.push(todo);
+      }
+    });
+    const result = todoContainer.filter((item) => !toBeFiltered.includes(item));
+    console.log(result);
+    todoContainer = result;
     projectContainer.splice(index, 1);
   };
 

@@ -42,12 +42,12 @@ const createTodo = () => {
 };
 
 const createSecondTodo = () => {
-  const title = 'jamiroquai';
+  const title = 'history';
   const description = 'the best!';
   const dueDate = '10/20/2025';
   const priority = priorities[1];
   const notes = 'test notes';
-  const project = 'music';
+  const project = 'homework';
   const newTodo = new todo(
     title,
     description,
