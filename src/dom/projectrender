@@ -1,0 +1,16 @@
+import { storageContainers } from '../logic/storage';
+const projContainer = document.querySelector('.project-container');
+
+const renderProjects = () => {
+  while (projContainer.firstChild)
+    projContainer.removeChild(projContainer.lastChild);
+  //Resets projContainer and then render
+  storageContainers.projectContainer.forEach((project) => {
+    const newProj = document.createElement('div');
+    newProj.textContent = project;
+    newProj.classList.add('proj');
+    projContainer.appendChild(newProj);
+  });
+};
+
+export { renderProjects };

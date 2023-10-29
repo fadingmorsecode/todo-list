@@ -29,8 +29,8 @@ const storageContainers = (function () {
   };
 
   const logContainers = function () {
-    console.log(todoContainer);
-    console.log(projectContainer);
+    console.log(JSON.stringify(todoContainer));
+    console.log(JSON.stringify(projectContainer));
   };
 
   const editTodo = function (

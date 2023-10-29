@@ -8,6 +8,8 @@ import {
 import { createProject } from './logic/projectcreation';
 import { storageContainers } from './logic/storage';
 import { filterProject } from './logic/filter';
+import { renderProjects } from './dom/projectrender';
+import { clearProjects } from './dom/projectrender';
 
 loadImages();
 
@@ -15,18 +17,18 @@ createTodo();
 createSecondTodo();
 createThirdTodo();
 
-console.log(`Console.log:`);
-console.log(storageContainers.todoContainer);
-console.log(storageContainers.projectContainer);
-
-console.log('Method logging:');
 storageContainers.logContainers();
 
-//Delete Project (homework)
-storageContainers.deleteProject(1);
+storageContainers.editTodo(
+  2,
+  'snoop',
+  'something about me',
+  '10/10/10',
+  'medium',
+  'notes notes notes',
+  'homework'
+);
 
-console.log(`Console.log:`);
-console.log(storageContainers.todoContainer);
-console.log(storageContainers.projectContainer);
-console.log('Method logging:');
 storageContainers.logContainers();
+
+renderProjects();
