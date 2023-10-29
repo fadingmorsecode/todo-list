@@ -1,6 +1,6 @@
 const storageContainers = (function () {
   let todoContainer = [];
-  const projectContainer = ['music', 'homework'];
+  const projectContainer = ['music', 'homework', 'movies'];
 
   const addTodo = function (todo) {
     todoContainer.push(todo);

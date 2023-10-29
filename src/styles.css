@@ -130,6 +130,15 @@ table {
   border-spacing: 0;
 }
 
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 :root {
   --inter: 'Inter', sans-serif;
   --dela: 'Dela Gothic One', cursive;
@@ -271,6 +280,8 @@ header {
   border: solid 2px #f0f3f5;
   height: 4rem;
   background-color: white;
+  padding: 20px;
+  justify-content: space-between;
 }
 
 .proj > p {
@@ -280,4 +291,6 @@ header {
 
 .proj-delete > img {
   width: 30px;
+  display: flex;
+  align-items: center;
 }
