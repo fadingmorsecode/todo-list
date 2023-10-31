@@ -11,9 +11,11 @@ import { filterProject } from './logic/filter';
 import { renderProjects } from './dom/projectrender.js';
 import { clearProjects } from './dom/projectrender.js';
 import { loadNewProjListener } from './dom/newprojectlistener';
+import { loadDeleteProjListener } from './dom/projectdeletelistener';
 
 loadImages();
 loadNewProjListener();
+loadDeleteProjListener();
 
 createTodo();
 createSecondTodo();
@@ -30,6 +32,12 @@ storageContainers.editTodo(
   'notes notes notes',
   'homework'
 );
+
+storageContainers.logContainers();
+
+createProject('music');
+createProject('movies');
+createProject('homework');
 
 storageContainers.logContainers();
 

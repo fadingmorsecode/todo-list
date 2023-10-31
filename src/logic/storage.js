@@ -1,6 +1,7 @@
+import { renderProjects } from '../dom/projectrender';
 const storageContainers = (function () {
   let todoContainer = [];
-  const projectContainer = ['music', 'homework', 'movies'];
+  const projectContainer = [];
 
   const addTodo = function (todo) {
     todoContainer.push(todo);
@@ -14,18 +15,27 @@ const storageContainers = (function () {
     todoContainer.splice(index, 1);
   };
 
-  const deleteProject = function (index) {
-    const projectName = projectContainer[index];
-    const toBeFiltered = [];
-    todoContainer.forEach((todo) => {
-      if (todo['project'] === projectName) {
-        toBeFiltered.push(todo);
+  const deleteProject = function (id) {
+    projectContainer.forEach((project) => {
+      const projIndex = projectContainer.indexOf(project);
+      if (project.id === id) {
+        projectContainer.splice(projIndex, 1);
+        renderProjects();
+        console.log(projectContainer);
       }
     });
-    const result = todoContainer.filter((item) => !toBeFiltered.includes(item));
-    console.log(result);
-    todoContainer = result;
-    projectContainer.splice(index, 1);
+
+    // const projectName = projectContainer[index];
+    // const toBeFiltered = [];
+    // todoContainer.forEach((todo) => {
+    //   if (todo['project'] === projectName) {
+    //     toBeFiltered.push(todo);
+    //   }
+    // });
+    // const result = todoContainer.filter((item) => !toBeFiltered.includes(item));
+    // console.log(result);
+    // todoContainer = result;
+    // projectContainer.splice(index, 1);
   };
 
   const logContainers = function () {
