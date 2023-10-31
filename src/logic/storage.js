@@ -21,7 +21,6 @@ const storageContainers = (function () {
       if (project.id === id) {
         projectContainer.splice(projIndex, 1);
         renderProjects();
-        console.log(projectContainer);
       }
     });
 

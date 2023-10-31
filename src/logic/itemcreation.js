@@ -2,6 +2,7 @@ import { storageContainers } from './storage';
 
 // Default state of of checked status is unchecked.
 class todo {
+  static counter = -1;
   constructor(title, description, dueDate, priority, notes, project) {
     this.title = title;
     this.description = description;
@@ -10,6 +11,7 @@ class todo {
     this.notes = notes;
     this.project = project;
     this.checkState = false;
+    this.id = ++this.constructor.counter;
   }
 }
 
