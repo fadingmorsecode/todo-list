@@ -12,8 +12,9 @@ const loadImages = () => {
   plusIcon.src = plusImage;
   plusIconContainer.appendChild(plusIcon);
 
-  const projectAddBtn = document.querySelector('.project-add-btn');
+  const projectAddBtn = document.querySelector('.project-add-btn-container');
   const projectPlusIcon = new Image();
+  projectPlusIcon.classList.add('new-proj-btn');
   projectPlusIcon.src = plusImage;
   projectAddBtn.appendChild(projectPlusIcon);
 };

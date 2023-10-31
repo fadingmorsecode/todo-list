@@ -8,10 +8,12 @@ import {
 import { createProject } from './logic/projectcreation';
 import { storageContainers } from './logic/storage';
 import { filterProject } from './logic/filter';
-import { renderProjects } from './dom/projectrender';
-import { clearProjects } from './dom/projectrender';
+import { renderProjects } from './dom/projectrender.js';
+import { clearProjects } from './dom/projectrender.js';
+import { loadNewProjListener } from './dom/newprojectlistener';
 
 loadImages();
+loadNewProjListener();
 
 createTodo();
 createSecondTodo();
