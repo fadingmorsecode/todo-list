@@ -1,7 +1,7 @@
 import { deleteModalLoader } from './deletemodal';
 import { storageContainers } from '../logic/storage';
 
-export function deleteModal(event) {
+export function deleteModal(proj) {
   deleteModalLoader();
 
   const modal = document.querySelector('.modal-container');
@@ -11,17 +11,18 @@ export function deleteModal(event) {
   const cancelBtn = document.querySelector('.modal-cancel-btn');
 
   deleteBtn.addEventListener('click', function () {
-    storageContainers.deleteProject(event.target.parentNode.parentNode.data.id);
+    console.log(proj.target.parentNode.parentNode.data.id);
+    storageContainers.deleteProject(proj.target.parentNode.parentNode.data.id);
     modal.style.display = 'none';
   });
 
   window.addEventListener('click', function (event) {
     if (event.target == modal) {
-      modal.style.display = 'none';
+      modal.remove();
     }
   });
 
   cancelBtn.addEventListener('click', function () {
-    modal.style.display = 'none';
+    modal.remove();
   });
 }
