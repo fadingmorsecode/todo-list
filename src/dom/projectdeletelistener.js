@@ -1,13 +1,11 @@
-import { storageContainers } from '../logic/storage';
+import { deleteModal } from './deletemodalcontroller';
 
 const projectContainer = document.querySelector('.project-container');
 
 export function loadDeleteProjListener() {
   function deleteProj(event) {
     if (event.target.matches('#delete-icon')) {
-      storageContainers.deleteProject(
-        event.target.parentNode.parentNode.data.id
-      );
+      deleteModal(event);
     }
   }
   projectContainer.addEventListener('click', deleteProj);

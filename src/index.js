@@ -12,6 +12,8 @@ import { renderProjects } from './dom/projectrender.js';
 import { clearProjects } from './dom/projectrender.js';
 import { loadNewProjListener } from './dom/newprojectlistener';
 import { loadDeleteProjListener } from './dom/projectdeletelistener';
+import { deleteModalLoader } from './dom/deletemodal';
+import { LoadDeleteModal } from './dom/deletemodalcontroller';
 
 loadImages();
 loadNewProjListener();
