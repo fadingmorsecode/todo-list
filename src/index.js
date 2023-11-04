@@ -25,18 +25,6 @@ createThirdTodo();
 
 storageContainers.logContainers();
 
-storageContainers.editTodo(
-  2,
-  'snoop',
-  'something about me',
-  '10/10/10',
-  'medium',
-  'notes notes notes',
-  'homework'
-);
-
-storageContainers.logContainers();
-
 createProject('music');
 createProject('movies');
 createProject('homework');

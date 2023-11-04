@@ -31,7 +31,8 @@ const createTodo = () => {
   const dueDate = '10/07/2025';
   const priority = priorities[0];
   const notes = 'test notes';
-  const project = 'homework';
+  // get project IDs - will have a selection for projects and returns their respective ID #
+  const project = 2;
   const newTodo = new todo(
     title,
     description,
@@ -49,7 +50,7 @@ const createSecondTodo = () => {
   const dueDate = '10/20/2025';
   const priority = priorities[1];
   const notes = 'test notes';
-  const project = 'homework';
+  const project = 2;
   const newTodo = new todo(
     title,
     description,
@@ -67,7 +68,7 @@ const createThirdTodo = () => {
   const dueDate = '10/15/2025';
   const priority = priorities[2];
   const notes = 'test notes';
-  const project = 'music';
+  const project = 0;
   const newTodo = new todo(
     title,
     description,

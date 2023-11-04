@@ -21,20 +21,19 @@ const storageContainers = (function () {
       if (project.id === id) {
         projectContainer.splice(projIndex, 1);
         renderProjects();
+
+        const toBeFiltered = [];
+        todoContainer.forEach((todo) => {
+          if (todo['project'] === id) {
+            toBeFiltered.push(todo);
+          }
+        });
+        const result = todoContainer.filter(
+          (item) => !toBeFiltered.includes(item)
+        );
+        todoContainer = result;
       }
     });
-
-    // const projectName = projectContainer[index];
-    // const toBeFiltered = [];
-    // todoContainer.forEach((todo) => {
-    //   if (todo['project'] === projectName) {
-    //     toBeFiltered.push(todo);
-    //   }
-    // });
-    // const result = todoContainer.filter((item) => !toBeFiltered.includes(item));
-    // console.log(result);
-    // todoContainer = result;
-    // projectContainer.splice(index, 1);
   };
 
   const logContainers = function () {
