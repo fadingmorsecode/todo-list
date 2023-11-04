@@ -198,13 +198,13 @@ header {
 .inbox {
   width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
   border-radius: 15px;
   border: solid 2px #f0f3f5;
   height: 4rem;
   flex-shrink: 0;
-  background-color: grey;
+  padding: 20px;
+  background-color: white;
 }
 
 .inbox > p {
@@ -233,6 +233,14 @@ header {
 
 /* Styling for Project Container */
 
+.grey {
+  background-color: grey;
+}
+
+.white {
+  background-color: white;
+}
+
 .project-container {
   width: 100%;
   display: flex;
@@ -247,7 +255,6 @@ header {
   border-radius: 15px;
   border: solid 2px #f0f3f5;
   height: 4rem;
-  background-color: white;
   padding: 20px;
   justify-content: space-between;
 }

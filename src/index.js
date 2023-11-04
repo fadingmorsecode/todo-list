@@ -16,19 +16,20 @@ import { deleteModalLoader } from './dom/deletemodal';
 import { LoadDeleteModal } from './dom/deletemodalcontroller';
 import { loadProjectListeners } from './dom/projectlisteners';
 import { renderAllTodos } from './dom/todorender';
+import { loadHighlighting } from './dom/projecthighlight';
 
 createTodo();
 createSecondTodo();
 createThirdTodo();
+
+createProject('music');
+createProject('movies');
+createProject('homework');
 
 loadImages();
 loadNewProjListener();
 loadDeleteProjListener();
 loadProjectListeners();
 renderAllTodos();
-
-createProject('music');
-createProject('movies');
-createProject('homework');
-
 renderProjects();
+loadHighlighting();

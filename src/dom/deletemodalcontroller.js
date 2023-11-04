@@ -1,6 +1,7 @@
 import { deleteModalLoader } from './deletemodal';
 import { storageContainers } from '../logic/storage';
 import { renderAllTodos } from './todorender';
+import { changeProjWhite, defaultInboxHighlight } from './projecthighlight';
 
 export function deleteModal(proj) {
   deleteModalLoader();
@@ -13,6 +14,8 @@ export function deleteModal(proj) {
 
   deleteBtn.addEventListener('click', function () {
     storageContainers.deleteProject(proj.target.parentNode.parentNode.data.id);
+    changeProjWhite();
+    defaultInboxHighlight();
     renderAllTodos();
     modal.remove();
   });
