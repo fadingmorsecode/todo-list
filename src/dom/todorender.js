@@ -44,7 +44,9 @@ function todoTemplate(todo) {
 
 export function renderAllTodos() {
   clearTodosRender();
-  storageContainers.todoContainer.forEach((todo) => {
+  console.log(storageContainers.getTodoContainer());
+  storageContainers.getTodoContainer().forEach((todo) => {
+    storageContainers.logContainers();
     todoTemplate(todo);
   });
 }

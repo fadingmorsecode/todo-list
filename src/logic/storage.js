@@ -38,9 +38,15 @@ const storageContainers = (function () {
   };
 
   const logContainers = function () {
+    console.log('begin log');
     console.log(JSON.stringify(todoContainer));
     console.log(JSON.stringify(projectContainer));
   };
+
+  const getTodoContainer = function () {
+    return todoContainer;
+  };
+  const getProjectContainer = () => projectContainer;
 
   const editTodo = function (
     index,
@@ -80,6 +86,7 @@ const storageContainers = (function () {
     editTodo,
     editProject,
     logContainers,
+    getTodoContainer,
   };
 })();
 
