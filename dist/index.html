@@ -14,14 +14,20 @@
       </header>
       <div class="side-bar">
         <div class="new-projects-container">
-          <div class="new-project-input-container">
-          <input type="text" id="new-project-input" placeholder="New Project" pattern=".{1,16}" required title="1 to 16 characters">
-          <div class="project-add-btn-container"></div>
-          </div>
+          <form class="proj-form">
+            <input
+              type="text"
+              id="new-project-input"
+              placeholder="New Project"
+              minlength="1"
+              maxlength="16"
+              required
+            />
+            <button type="submit" class="proj-submit-btn">Add</button>
+          </form>
         </div>
         <div class="inbox"><p>Inbox</p></div>
-        <div class="project-container">
-        </div>
+        <div class="project-container"></div>
       </div>
       <div class="content">
         <div class="content-header">

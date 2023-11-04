@@ -245,20 +245,12 @@ header {
   align-items: center;
 }
 
-.new-task-btn > img,
-.project-add-btn-container > img {
+.new-task-btn > img {
   width: 30px;
 }
 
-.new-task-btn > img:hover,
-.project-add-btn-container > img:hover {
+.new-task-btn > img:hover {
   transform: scale(1.2);
-}
-
-.project-add-btn-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* Styling for Project Container */
@@ -282,20 +274,29 @@ header {
   justify-content: space-between;
 }
 
-.proj > p {
-  font-family: var(--inter);
-  font-size: 1rem;
+.proj-submit-btn {
+  color: white;
+  background-color: purple;
+  border: none;
+  border-radius: 5px;
+  height: 1.7rem;
+  width: 4rem;
 }
 
-.proj-delete > img {
-  width: 30px;
-  display: flex;
-  align-items: center;
+.proj-submit-btn:hover,
+.proj-submit-btn:focus {
+  background-color: plum;
+  color: black;
 }
 
 #new-project-input {
-  border: solid 2px black;
+  border: solid 3px purple;
+  height: 1.7rem;
   border-radius: 5px;
+}
+
+#new-project-input:focus {
+  border: solid 4px plum;
 }
 
 .new-projects-container {
@@ -311,16 +312,18 @@ header {
   gap: 5px;
 }
 
-.new-project-input-container {
-  display: flex;
-  gap: 10px;
+.proj > p {
+  font-family: var(--inter);
+  font-size: 1rem;
 }
 
-#invalid-proj {
-  color: red;
-  font-family: var(--inter);
-  font-size: 14px;
+.proj-delete > img {
+  width: 30px;
+  display: flex;
+  align-items: center;
 }
+
+/* Styling for delete modal */
 
 .modal-container {
   position: fixed;
