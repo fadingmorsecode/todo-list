@@ -1,5 +1,6 @@
 import { deleteModalLoader } from './deletemodal';
 import { storageContainers } from '../logic/storage';
+import { renderAllTodos } from './todorender';
 
 export function deleteModal(proj) {
   deleteModalLoader();
@@ -11,8 +12,8 @@ export function deleteModal(proj) {
   const cancelBtn = document.querySelector('.modal-cancel-btn');
 
   deleteBtn.addEventListener('click', function () {
-    console.log(proj.target.parentNode.parentNode.data.id);
     storageContainers.deleteProject(proj.target.parentNode.parentNode.data.id);
+    renderAllTodos();
     modal.remove();
   });
 

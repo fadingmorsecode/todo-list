@@ -14,14 +14,18 @@ import { loadNewProjListener } from './dom/newprojectlistener';
 import { loadDeleteProjListener } from './dom/projectdeletelistener';
 import { deleteModalLoader } from './dom/deletemodal';
 import { LoadDeleteModal } from './dom/deletemodalcontroller';
-
-loadImages();
-loadNewProjListener();
-loadDeleteProjListener();
+import { loadProjectListeners } from './dom/projectlisteners';
+import { renderAllTodos } from './dom/todorender';
 
 createTodo();
 createSecondTodo();
 createThirdTodo();
+
+loadImages();
+loadNewProjListener();
+loadDeleteProjListener();
+loadProjectListeners();
+renderAllTodos();
 
 storageContainers.logContainers();
 
