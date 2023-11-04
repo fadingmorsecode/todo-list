@@ -10,6 +10,7 @@ export function loadNewProjListener() {
         event.preventDefault();
         createProject(newProjInput.value);
 
+        // get currently selected project
         let currentlySelected = '';
         const projContainer = document.querySelector('.project-container');
         const projects = projContainer.childNodes;
@@ -21,9 +22,8 @@ export function loadNewProjListener() {
 
         renderProjects();
 
-        // if project
-
         [...projects].forEach((project) => {
+          // add grey background to project if currently selected
           console.log(currentlySelected);
           if (project.data.id === currentlySelected) {
             console.log(project);

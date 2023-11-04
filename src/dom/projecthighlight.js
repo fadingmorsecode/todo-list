@@ -15,24 +15,24 @@ export function changeProjWhite() {
 }
 
 export function loadHighlighting() {
-  //DEFAULT HIGHLIGHT TO BE INBOX.
+  // default highlighting set to inbox
   changeProjWhite();
   defaultInboxHighlight();
 
-  //FUNCTION FOR CHANGING HIGHLIGHT UPON EVENT LISTENER
-
   function updateHighlight(event) {
     if (event.target.matches('.proj')) {
+      // highlight the project selected
       changeProjWhite();
       inbox.classList.remove('grey');
       inbox.classList.add('white');
       event.target.classList.remove('white');
       event.target.classList.add('grey');
     } else if (event.target.matches('.inbox')) {
+      // highlight the inbox if selected
       changeProjWhite();
       defaultInboxHighlight();
     }
   }
-  //EVENT LISTENER ON DOCUMENT
+
   document.addEventListener('click', updateHighlight);
 }
