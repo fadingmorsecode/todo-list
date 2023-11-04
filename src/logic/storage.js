@@ -32,6 +32,7 @@ const storageContainers = (function () {
           (item) => !toBeFiltered.includes(item)
         );
         todoContainer = result;
+        logContainers();
       }
     });
   };
