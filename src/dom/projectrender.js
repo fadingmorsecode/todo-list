@@ -6,7 +6,7 @@ const renderProjects = () => {
   while (projContainer.firstChild)
     projContainer.removeChild(projContainer.lastChild);
   //Resets projContainer and then render
-  storageContainers.getTodoContainer().forEach((project) => {
+  storageContainers.getProjectContainer().forEach((project) => {
     const newProj = document.createElement('div');
     newProj.textContent = project.title;
     newProj.data = project;
@@ -19,7 +19,6 @@ const renderProjects = () => {
     newProj.appendChild(deleteBtn);
     newProj.classList.add('proj');
     projContainer.appendChild(newProj);
-    storageContainers.logContainers();
   });
 };
 

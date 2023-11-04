@@ -27,12 +27,8 @@ loadDeleteProjListener();
 loadProjectListeners();
 renderAllTodos();
 
-storageContainers.logContainers();
-
 createProject('music');
 createProject('movies');
 createProject('homework');
-
-storageContainers.logContainers();
 
 renderProjects();

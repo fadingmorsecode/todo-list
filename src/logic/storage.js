@@ -32,21 +32,16 @@ const storageContainers = (function () {
           (item) => !toBeFiltered.includes(item)
         );
         todoContainer = result;
-        logContainers();
       }
     });
-  };
-
-  const logContainers = function () {
-    console.log('begin log');
-    console.log(JSON.stringify(todoContainer));
-    console.log(JSON.stringify(projectContainer));
   };
 
   const getTodoContainer = function () {
     return todoContainer;
   };
-  const getProjectContainer = () => projectContainer;
+  const getProjectContainer = function () {
+    return projectContainer;
+  };
 
   const editTodo = function (
     index,
@@ -85,8 +80,8 @@ const storageContainers = (function () {
     deleteProject,
     editTodo,
     editProject,
-    logContainers,
     getTodoContainer,
+    getProjectContainer,
   };
 })();
 
