@@ -94,10 +94,11 @@ export function newTodoModal() {
   const cancelBtn = document.createElement('button');
   cancelBtn.classList.add('todo-modal-cancel');
   cancelBtn.textContent = 'Cancel';
+  cancelBtn.type = 'button';
   buttonsContainer.appendChild(cancelBtn);
   const createBtn = document.createElement('button');
   createBtn.textContent = 'Create';
   createBtn.type = 'submit';
   buttonsContainer.appendChild(createBtn);
-  modalContent.appendChild(buttonsContainer);
+  form.appendChild(buttonsContainer);
 }

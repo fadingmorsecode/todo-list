@@ -491,6 +491,7 @@ header {
   height: 30px;
   border-radius: 5px;
   color: white;
+  font-size: 15px;
 }
 
 .new-todo-modal-buttons > button[type='submit'] {
