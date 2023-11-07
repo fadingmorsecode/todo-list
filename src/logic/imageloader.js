@@ -10,6 +10,7 @@ const loadImages = () => {
   const plusIconContainer = document.querySelector('.new-task-btn');
   const plusIcon = new Image();
   plusIcon.src = plusImage;
+  plusIcon.classList.add('plus-icon');
   plusIconContainer.appendChild(plusIcon);
 };
 
