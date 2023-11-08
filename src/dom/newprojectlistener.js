@@ -16,7 +16,7 @@ export function loadNewProjListener() {
         const projects = projContainer.childNodes;
         [...projects].forEach((project) => {
           if (project.classList.contains('grey')) {
-            console.log((currentlySelected = project.data.id));
+            currentlySelected = project.data.id;
           }
         });
 
@@ -24,9 +24,7 @@ export function loadNewProjListener() {
 
         [...projects].forEach((project) => {
           // add grey background to project if currently selected
-          console.log(currentlySelected);
           if (project.data.id === currentlySelected) {
-            console.log(project);
             project.classList.remove('white');
             project.classList.add('grey');
           } else {

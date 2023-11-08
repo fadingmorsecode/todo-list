@@ -25,21 +25,14 @@ todo.prototype.toggleCheck = function () {
 
 const priorities = ['low', 'medium', 'high'];
 
-const createTodo = () => {
-  const title = 'test project';
-  const description = 'test description';
-  const dueDate = '10/07/2025';
-  const priority = priorities[0];
-  const notes = 'test notes';
-  // get project IDs - will have a selection for projects and returns their respective ID #
-  const project = 2;
+const createTodo = (title, description, dueDate, priority, notes, project) => {
   const newTodo = new todo(
     title,
     description,
     dueDate,
     priority,
     notes,
-    project
+    Number(project)
   );
   storageContainers.addTodo(newTodo);
 };

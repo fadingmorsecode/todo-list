@@ -1,5 +1,8 @@
 import { newTodoModalLoader } from './newtodomodal';
 import { storageContainers } from '../logic/storage';
+import { createTodo } from '../logic/itemcreation';
+import { renderAllTodos } from './todorender';
+import { renderFilteredTodos } from './todorender';
 
 export function newTodoModal() {
   newTodoModalLoader();
@@ -31,6 +34,36 @@ export function newTodoModal() {
     const todoForm = document.querySelector('.new-todo-modal-form');
     if (todoForm.checkValidity()) {
       event.preventDefault();
+      // create todo
+      const todoTitle = document.querySelector('#todo-modal-title');
+      const todoDescription = document.querySelector('#todo-modal-description');
+      const todoDueDate = document.querySelector('#todo-modal-dueDate');
+      const todoPriority = document.querySelector('#todo-modal-priority');
+      const todoNotes = document.querySelector('#todo-modal-notes');
+      const todoProject = document.querySelector('#todo-modal-project');
+      createTodo(
+        todoTitle.value,
+        todoDescription.value,
+        todoDueDate.value,
+        todoPriority.value,
+        todoNotes.value,
+        todoProject.value
+      );
+
+      let currentlySelected = document.querySelector('.grey');
+      if (currentlySelected === document.querySelector('.inbox')) {
+        renderAllTodos();
+      } else {
+        const projContainer = document.querySelector('.project-container');
+        const projects = projContainer.childNodes;
+        [...projects].forEach((project) => {
+          if (project.classList.contains('grey')) {
+            renderFilteredTodos(project.data.id);
+          }
+        });
+      }
+
+      console.log(storageContainers.getTodoContainer());
       modal.remove();
     }
   }
