@@ -9,6 +9,9 @@ export function expandTodoController(expandedTodo) {
   const editBtn = document.querySelector('.todo-modal-submit');
   editBtn.textContent = 'Save';
 
+  const taskParagraph = document.querySelector('#todo-modal-paragraph');
+  taskParagraph.textContent = 'Edit Your Task';
+
   const modal = document.querySelector('.new-todo-modal-container');
   modal.style.display = 'flex';
 
