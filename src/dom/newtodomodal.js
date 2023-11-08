@@ -23,6 +23,7 @@ export function newTodoModalLoader() {
   const title = document.createElement('input');
   title.setAttribute('type', 'text');
   title.setAttribute('id', 'todo-modal-title');
+  title.required = true;
   titleContainer.appendChild(titleLabel);
   titleContainer.appendChild(title);
   form.appendChild(titleContainer);
@@ -80,6 +81,7 @@ export function newTodoModalLoader() {
   dueDateLabel.textContent = 'Due Date';
   dueDateLabel.htmlFor = 'todo-modal-dueDate';
   const dueDate = document.createElement('input');
+  dueDate.required = true;
   dueDate.setAttribute('type', 'date');
   dueDate.setAttribute('id', 'todo-modal-dueDate');
   dueDateContainer.appendChild(dueDateLabel);
@@ -112,6 +114,7 @@ export function newTodoModalLoader() {
   const createBtn = document.createElement('button');
   createBtn.textContent = 'Create';
   createBtn.type = 'submit';
+  createBtn.classList.add('todo-modal-submit');
   buttonsContainer.appendChild(createBtn);
   form.appendChild(buttonsContainer);
 }
