@@ -1,6 +1,6 @@
 import { storageContainers } from '../logic/storage';
 import { filterProject } from '../logic/filter';
-import editImage from '../assets/edit-svgrepo-com.svg';
+import editImage from '../assets/expand-alt-svgrepo-com.svg';
 const todoListViewContainer = document.querySelector('.todo-container');
 
 export function clearTodosRender() {
@@ -11,6 +11,7 @@ export function clearTodosRender() {
 
 function todoTemplate(todo) {
   const todoItem = document.createElement('div');
+  todoItem.data = todo;
   const checkContainer = document.createElement('input');
   const todoTitleText = document.createElement('div');
   const todoPriorityText = document.createElement('div');
@@ -19,7 +20,7 @@ function todoTemplate(todo) {
 
   const editIcon = new Image();
   editIcon.src = editImage;
-  editIcon.setAttribute('id', 'edit-icon');
+  editIcon.classList.add('edit-icon');
   todoEditContainer.appendChild(editIcon);
 
   todoItem.classList.add('todo');

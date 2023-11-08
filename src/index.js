@@ -18,6 +18,7 @@ import { loadProjectListeners } from './dom/projectlisteners';
 import { renderAllTodos } from './dom/todorender';
 import { loadHighlighting } from './dom/projecthighlight';
 import { loadNewTaskListener } from './dom/newtasklistener';
+import { loadExpandListener } from './dom/todoexpandlistener';
 
 createSecondTodo();
 createThirdTodo();
@@ -34,3 +35,4 @@ renderAllTodos();
 renderProjects();
 loadHighlighting();
 loadNewTaskListener();
+loadExpandListener();

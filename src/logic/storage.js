@@ -57,7 +57,7 @@ const storageContainers = (function () {
     todoContainer[index]['dueDate'] = newDueDate;
     todoContainer[index]['priority'] = newPriority;
     todoContainer[index]['notes'] = newNotes;
-    todoContainer[index]['project'] = newProject;
+    todoContainer[index]['project'] = Number(newProject);
   };
 
   const editProject = function (index, newName) {

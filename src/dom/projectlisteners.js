@@ -3,7 +3,6 @@ import { renderAllTodos } from './todorender';
 
 export function loadProjectListeners() {
   function listTodos(event) {
-    console.log(event.target);
     if (event.target.matches('.proj')) {
       renderFilteredTodos(event.target.data.id);
     } else if (event.target.matches('.inbox')) {

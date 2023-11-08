@@ -227,7 +227,8 @@ header {
   width: 30px;
 }
 
-.new-task-btn > img:hover {
+.new-task-btn > img:hover,
+.edit-icon:hover {
   transform: scale(1.2);
 }
 
@@ -377,6 +378,7 @@ header {
   grid-column-end: 3;
   padding: 10px;
   gap: 15px;
+  overflow: auto;
 }
 
 .content-header {
@@ -412,8 +414,8 @@ header {
   justify-self: center;
 }
 
-#edit-icon {
-  width: 2rem;
+.edit-icon {
+  width: 1.5rem;
 }
 
 /* New Todo Modal */

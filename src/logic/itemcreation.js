@@ -23,8 +23,6 @@ todo.prototype.toggleCheck = function () {
   }
 };
 
-const priorities = ['low', 'medium', 'high'];
-
 const createTodo = (title, description, dueDate, priority, notes, project) => {
   const newTodo = new todo(
     title,
@@ -40,8 +38,8 @@ const createTodo = (title, description, dueDate, priority, notes, project) => {
 const createSecondTodo = () => {
   const title = 'history';
   const description = 'the best!';
-  const dueDate = '10/20/2025';
-  const priority = priorities[1];
+  const dueDate = '2025-10-20';
+  const priority = 'Low';
   const notes = 'test notes';
   const project = 2;
   const newTodo = new todo(
@@ -58,8 +56,8 @@ const createSecondTodo = () => {
 const createThirdTodo = () => {
   const title = 'mac demarco';
   const description = 'soooo good!';
-  const dueDate = '10/15/2025';
-  const priority = priorities[2];
+  const dueDate = '2025-10-15';
+  const priority = 'High';
   const notes = 'test notes';
   const project = 0;
   const newTodo = new todo(
