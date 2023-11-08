@@ -1,4 +1,4 @@
-export function newTodoModal() {
+export function newTodoModalLoader() {
   const body = document.querySelector('body');
   const modalContainer = document.createElement('div');
   modalContainer.classList.add('new-todo-modal-container');
@@ -60,6 +60,19 @@ export function newTodoModal() {
   priority.setAttribute('id', 'todo-modal-priority');
   priorityContainer.appendChild(priorityLabel);
   priorityContainer.appendChild(priority);
+
+  const prioOne = document.createElement('option');
+  prioOne.textContent = 'Low';
+  prioOne.value = 'Low';
+  const prioTwo = document.createElement('option');
+  prioTwo.textContent = 'Medium';
+  prioTwo.value = 'Medium';
+  const prioThree = document.createElement('option');
+  prioThree.textContent = 'High';
+  prioThree.value = 'High';
+  priority.appendChild(prioOne);
+  priority.appendChild(prioTwo);
+  priority.appendChild(prioThree);
 
   const dueDateContainer = document.createElement('div');
   dueDateContainer.classList.add('new-todo-form-containers');

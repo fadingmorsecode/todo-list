@@ -18,7 +18,6 @@ import { loadProjectListeners } from './dom/projectlisteners';
 import { renderAllTodos } from './dom/todorender';
 import { loadHighlighting } from './dom/projecthighlight';
 import { loadNewTaskListener } from './dom/newtasklistener';
-import { newTodoModal } from './dom/newtodomodal';
 
 createTodo();
 createSecondTodo();
@@ -36,4 +35,3 @@ renderAllTodos();
 renderProjects();
 loadHighlighting();
 loadNewTaskListener();
-newTodoModal();

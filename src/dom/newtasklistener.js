@@ -1,7 +1,9 @@
+import { newTodoModal } from './newtodomodalcontroller';
+
 export function loadNewTaskListener() {
   function newTodo(event) {
     if (event.target.matches('.plus-icon')) {
-      // Function for new task modal.
+      newTodoModal();
     }
   }
   document.addEventListener('click', newTodo);
