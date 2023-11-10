@@ -24,8 +24,15 @@ function todoTemplate(todo) {
   todoEditContainer.appendChild(editIcon);
 
   todoItem.classList.add('todo');
+  todoItem.classList.add('todo-default-color');
   checkContainer.classList.add('checklist-container');
   checkContainer.setAttribute('type', 'checkbox');
+  if (todo.checkState === true) {
+    checkContainer.checked = true;
+    todoItem.classList.remove('todo-default-color');
+    todoItem.classList.add('todo-checked');
+  }
+
   todoTitleText.classList.add('todo-listview-text');
   todoPriorityText.classList.add('todo-listview-priority');
   todoDateText.classList.add('todo-listview-date');

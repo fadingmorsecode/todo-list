@@ -298,6 +298,7 @@ header {
   gap: 5px;
   top: 0;
   position: sticky;
+  border: solid grey 2px;
 }
 
 .proj > p {
@@ -391,6 +392,7 @@ header {
   height: 4rem;
   width: 100%;
   flex-shrink: 0;
+  border: solid grey 2px;
 }
 
 .todo-container {
@@ -401,13 +403,13 @@ header {
 }
 
 .todo {
-  background-color: white;
   width: 60%;
   height: 4rem;
   border-radius: 15px;
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
   align-items: center;
+  border: solid grey 2px;
 }
 
 .edit-btn-container {
@@ -521,4 +523,13 @@ header {
 #todo-modal-notes {
   resize: none;
   height: 4rem;
+}
+
+.todo-default-color {
+  background-color: white;
+}
+
+.todo-checked {
+  background-color: gray;
+  text-decoration: line-through;
 }
