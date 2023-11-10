@@ -409,7 +409,6 @@ header {
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
   align-items: center;
-  border: solid grey 2px;
 }
 
 .edit-btn-container {
@@ -531,5 +530,18 @@ header {
 
 .todo-checked {
   background-color: gray;
+  border-color: grey;
   text-decoration: line-through;
+}
+
+.High {
+  border: solid red 2px;
+}
+
+.Medium {
+  border: solid yellow 2px;
+}
+
+.Low {
+  border: solid green 2px;
 }

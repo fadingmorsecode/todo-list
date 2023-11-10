@@ -31,6 +31,17 @@ function todoTemplate(todo) {
     checkContainer.checked = true;
     todoItem.classList.remove('todo-default-color');
     todoItem.classList.add('todo-checked');
+  } else {
+    switch (todo.priority) {
+      case 'High':
+        todoItem.classList.add('High');
+        break;
+      case 'Medium':
+        todoItem.classList.add('Medium');
+        break;
+      case 'Low':
+        todoItem.classList.add('Low');
+    }
   }
 
   todoTitleText.classList.add('todo-listview-text');
