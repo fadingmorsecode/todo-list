@@ -2,6 +2,8 @@ import { storageContainers } from '../logic/storage';
 import { filterProject } from '../logic/filter';
 import editImage from '../assets/expand-alt-svgrepo-com.svg';
 import deleteImage from '../assets/trash-xmark-svgrepo-com.svg';
+import parse from 'date-fns/parse';
+import { formatDistanceStrict } from 'date-fns';
 const todoListViewContainer = document.querySelector('.todo-container');
 
 export function clearTodosRender() {
@@ -59,7 +61,11 @@ function todoTemplate(todo) {
 
   todoTitleText.textContent = todo.title;
   todoPriorityText.textContent = `Priority: ${todo.priority}`;
-  todoDateText.textContent = `Due: ${todo.dueDate}`;
+  const parsedDate = parse(todo.dueDate, 'yyyy-MM-dd', new Date());
+  const distance = formatDistanceStrict(parsedDate, new Date(), {
+    addSuffix: true,
+  });
+  todoDateText.textContent = `Due: ${distance}`;
 
   todoListViewContainer.appendChild(todoItem);
   todoItem.appendChild(checkContainer);
