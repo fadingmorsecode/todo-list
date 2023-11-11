@@ -1,6 +1,7 @@
 import { storageContainers } from '../logic/storage';
 import { filterProject } from '../logic/filter';
 import editImage from '../assets/expand-alt-svgrepo-com.svg';
+import deleteImage from '../assets/trash-xmark-svgrepo-com.svg';
 const todoListViewContainer = document.querySelector('.todo-container');
 
 export function clearTodosRender() {
@@ -17,11 +18,17 @@ function todoTemplate(todo) {
   const todoPriorityText = document.createElement('div');
   const todoDateText = document.createElement('div');
   const todoEditContainer = document.createElement('div');
+  const todoDeleteContainer = document.createElement('div');
 
   const editIcon = new Image();
   editIcon.src = editImage;
   editIcon.classList.add('edit-icon');
   todoEditContainer.appendChild(editIcon);
+
+  const deleteIcon = new Image();
+  deleteIcon.src = deleteImage;
+  deleteIcon.classList.add('todo-delete-icon');
+  todoDeleteContainer.appendChild(deleteIcon);
 
   todoItem.classList.add('todo');
   todoItem.classList.add('todo-default-color');
@@ -48,6 +55,7 @@ function todoTemplate(todo) {
   todoPriorityText.classList.add('todo-listview-priority');
   todoDateText.classList.add('todo-listview-date');
   todoEditContainer.classList.add('edit-btn-container');
+  todoDeleteContainer.classList.add('todo-delete-btn-container');
 
   todoTitleText.textContent = todo.title;
   todoPriorityText.textContent = `Priority: ${todo.priority}`;
@@ -59,6 +67,7 @@ function todoTemplate(todo) {
   todoItem.appendChild(todoPriorityText);
   todoItem.appendChild(todoDateText);
   todoItem.appendChild(todoEditContainer);
+  todoItem.appendChild(todoDeleteContainer);
 }
 
 export function renderAllTodos() {

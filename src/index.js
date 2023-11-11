@@ -20,6 +20,7 @@ import { loadHighlighting } from './dom/projecthighlight';
 import { loadNewTaskListener } from './dom/newtasklistener';
 import { loadExpandListener } from './dom/todoexpandlistener';
 import { loadCheckListener } from './dom/checklistener';
+import { loadTodoDeleteListener } from './dom/tododeletelistener';
 
 createSecondTodo();
 createThirdTodo();
@@ -38,3 +39,4 @@ loadHighlighting();
 loadNewTaskListener();
 loadExpandListener();
 loadCheckListener();
+loadTodoDeleteListener();
