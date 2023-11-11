@@ -403,12 +403,18 @@ header {
 }
 
 .todo {
-  width: 60%;
-  height: 4rem;
+  width: 80%;
+  min-height: 4rem;
   border-radius: 15px;
   display: grid;
-  grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
+  grid-template-columns: 1fr 5fr 2fr 2fr 1fr;
   align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.todo-listview-text {
+  word-break: keep-all;
 }
 
 .edit-btn-container {
@@ -535,13 +541,13 @@ header {
 }
 
 .High {
-  border: solid red 2px;
+  border: solid red 4px;
 }
 
 .Medium {
-  border: solid yellow 2px;
+  border: solid yellow 4px;
 }
 
 .Low {
-  border: solid green 2px;
+  border: solid green 4px;
 }

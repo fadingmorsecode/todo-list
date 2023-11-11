@@ -79,7 +79,6 @@ export function expandTodoController(expandedTodo) {
         });
       }
 
-      console.log(storageContainers.getTodoContainer());
       modal.remove();
     }
   }

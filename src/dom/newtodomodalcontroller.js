@@ -1,8 +1,7 @@
 import { newTodoModalLoader } from './newtodomodal';
 import { storageContainers } from '../logic/storage';
 import { createTodo } from '../logic/itemcreation';
-import { renderAllTodos } from './todorender';
-import { renderFilteredTodos } from './todorender';
+import { renderSelectedProject } from './todorendercondition';
 
 export function newTodoModal() {
   newTodoModalLoader();
@@ -50,20 +49,8 @@ export function newTodoModal() {
         todoProject.value
       );
 
-      let currentlySelected = document.querySelector('.grey');
-      if (currentlySelected === document.querySelector('.inbox')) {
-        renderAllTodos();
-      } else {
-        const projContainer = document.querySelector('.project-container');
-        const projects = projContainer.childNodes;
-        [...projects].forEach((project) => {
-          if (project.classList.contains('grey')) {
-            renderFilteredTodos(project.data.id);
-          }
-        });
-      }
+      renderSelectedProject();
 
-      console.log(storageContainers.getTodoContainer());
       modal.remove();
     }
   }
