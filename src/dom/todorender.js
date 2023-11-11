@@ -65,7 +65,7 @@ function todoTemplate(todo) {
   const distance = formatDistanceStrict(parsedDate, new Date(), {
     addSuffix: true,
   });
-  todoDateText.textContent = `Due: ${distance}`;
+  todoDateText.textContent = `Due ${distance}`;
 
   todoListViewContainer.appendChild(todoItem);
   todoItem.appendChild(checkContainer);

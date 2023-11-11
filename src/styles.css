@@ -146,7 +146,13 @@ html {
 
 body {
   height: 100vh;
-  background: linear-gradient(to bottom, #000000, #333333);
+  background: rgb(179, 85, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(179, 85, 0, 1) 0%,
+    rgba(80, 48, 36, 1) 51%,
+    rgba(35, 34, 36, 1) 100%
+  );
 }
 
 .container {
@@ -164,12 +170,13 @@ header {
   grid-column-start: 1;
   grid-column-end: 3;
   border-radius: 0 0 15px 15px;
+  border-bottom: solid gray 5px;
   gap: 20px;
 }
 
 .logo-text {
-  font-size: 3rem;
-  font-family: var(--inter);
+  font-size: 2.5rem;
+  font-family: var(--dela);
   font-weight: 500;
 }
 
@@ -180,7 +187,7 @@ header {
 }
 
 .logo-img > img {
-  width: 3.5rem;
+  width: 3rem;
 }
 
 .side-bar {
@@ -205,16 +212,12 @@ header {
   flex-shrink: 0;
   padding: 20px;
   background-color: white;
-}
-
-.inbox > p {
   font-family: var(--inter);
-  font-size: 2rem;
 }
 
 .new-task-txt {
   font-family: var(--inter);
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .new-task-btn {
@@ -237,6 +240,7 @@ header {
 
 .grey {
   background-color: grey;
+  color: white;
 }
 
 .white {
@@ -259,11 +263,12 @@ header {
   height: 4rem;
   padding: 20px;
   justify-content: space-between;
+  font-family: var(--inter);
 }
 
 .proj-submit-btn {
   color: white;
-  background-color: purple;
+  background-color: orangered;
   border: none;
   border-radius: 5px;
   height: 1.7rem;
@@ -277,7 +282,7 @@ header {
 }
 
 #new-project-input {
-  border: solid 3px purple;
+  border: solid 3px orangered;
   height: 1.7rem;
   border-radius: 5px;
 }
@@ -412,6 +417,8 @@ header {
   align-items: center;
   gap: 5px;
   padding: 10px;
+  font-family: var(--inter);
+  font-size: 1.1rem;
 }
 
 .todo-listview-text {
@@ -467,6 +474,15 @@ header {
   font-size: 1.2rem;
 }
 
+.new-todo-modal-form > div > input,
+.new-todo-modal-form > div > textarea,
+.new-todo-modal-form > div > select,
+.new-todo-prio-container > div > select,
+.new-todo-prio-container > div > input {
+  font-family: var(--inter);
+  font-size: 16px;
+}
+
 .new-todo-form-containers {
   display: flex;
   flex-direction: column;
@@ -507,7 +523,7 @@ header {
 }
 
 .new-todo-modal-buttons > button[type='submit'] {
-  background-color: purple;
+  background-color: orangered;
 }
 
 #todo-modal-title,
@@ -516,7 +532,7 @@ header {
 #todo-modal-priority,
 #todo-modal-dueDate,
 #todo-modal-project {
-  border: solid 3px purple;
+  border: solid 3px orangered;
   border-radius: 5px;
 }
 
