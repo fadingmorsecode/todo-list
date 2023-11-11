@@ -1,7 +1,18 @@
 import { renderProjects } from '../dom/projectrender';
+import { getStoredProjects } from './localstorage';
+import { getStoredTodos } from './localstorage';
 const storageContainers = (function () {
   let todoContainer = [];
-  const projectContainer = [];
+  let projectContainer = [];
+
+  const loadStorage = function () {
+    if (getStoredTodos() !== null && getStoredTodos().length > 0) {
+      todoContainer = getStoredTodos();
+    }
+    if (getStoredProjects() !== null && getStoredProjects().length > 0) {
+      projectContainer = getStoredProjects();
+    }
+  };
 
   const addTodo = function (todo) {
     todoContainer.push(todo);
@@ -82,6 +93,7 @@ const storageContainers = (function () {
     editProject,
     getTodoContainer,
     getProjectContainer,
+    loadStorage,
   };
 })();
 

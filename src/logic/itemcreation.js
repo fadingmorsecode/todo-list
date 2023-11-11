@@ -1,7 +1,8 @@
+import { storeTodos } from './localstorage';
 import { storageContainers } from './storage';
 
 // Default state of of checked status is unchecked.
-class todo {
+export class todo {
   static counter = -1;
   constructor(title, description, dueDate, priority, notes, project) {
     this.title = title;
@@ -33,42 +34,7 @@ const createTodo = (title, description, dueDate, priority, notes, project) => {
     Number(project)
   );
   storageContainers.addTodo(newTodo);
+  storeTodos();
 };
 
-const createSecondTodo = () => {
-  const title = 'history';
-  const description = 'the best!';
-  const dueDate = '2025-10-20';
-  const priority = 'Low';
-  const notes = 'test notes';
-  const project = 2;
-  const newTodo = new todo(
-    title,
-    description,
-    dueDate,
-    priority,
-    notes,
-    project
-  );
-  storageContainers.addTodo(newTodo);
-};
-
-const createThirdTodo = () => {
-  const title = 'mac demarco';
-  const description = 'soooo good!';
-  const dueDate = '2025-10-15';
-  const priority = 'High';
-  const notes = 'test notes';
-  const project = 0;
-  const newTodo = new todo(
-    title,
-    description,
-    dueDate,
-    priority,
-    notes,
-    project
-  );
-  storageContainers.addTodo(newTodo);
-};
-
-export { createTodo, createSecondTodo, createThirdTodo };
+export { createTodo };

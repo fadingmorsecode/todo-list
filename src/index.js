@@ -21,9 +21,11 @@ import { loadNewTaskListener } from './dom/newtasklistener';
 import { loadExpandListener } from './dom/todoexpandlistener';
 import { loadCheckListener } from './dom/checklistener';
 import { loadTodoDeleteListener } from './dom/tododeletelistener';
+import { createDefaults } from './logic/defaultcreations';
 
-createSecondTodo();
-createThirdTodo();
+storageContainers.loadStorage();
+
+createDefaults();
 
 createProject('music');
 createProject('movies');
