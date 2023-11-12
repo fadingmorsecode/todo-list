@@ -1,3 +1,4 @@
+import { updateLocalStorage } from './localstorage';
 import { storageContainers } from './storage';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -18,8 +19,10 @@ export class todo {
 todo.prototype.toggleCheck = function () {
   if (this.checkState === false) {
     this.checkState = true;
+    updateLocalStorage();
   } else {
     this.checkState = false;
+    updateLocalStorage();
   }
 };
 
