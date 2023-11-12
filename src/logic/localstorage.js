@@ -1,5 +1,6 @@
 import { storageContainers } from './storage';
 import { createDefaults } from './defaultcreations';
+import { todo } from './itemcreation';
 
 // On page load - load localStorage if it exists or defaults if it doesn't
 export function checkForLocalStorage() {
@@ -27,7 +28,11 @@ export function updateLocalStorage() {
 // Get local storage arrays
 
 export function getLocalTodos() {
-  return JSON.parse(localStorage.getItem('todos'));
+  const storedTodos = JSON.parse(localStorage.getItem('todos'));
+  storedTodos.forEach((storedTodo) => {
+    Object.setPrototypeOf(storedTodo, todo.prototype);
+  });
+  return storedTodos;
 }
 
 export function getLocalProjects() {
