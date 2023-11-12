@@ -1,24 +1,28 @@
 import { renderProjects } from '../dom/projectrender';
-import { getStoredProjects } from './localstorage';
-import { getStoredTodos } from './localstorage';
+import { getLocalProjects, updateLocalStorage } from './localstorage';
+import { getLocalTodos } from './localstorage';
 const storageContainers = (function () {
   let todoContainer = [];
   let projectContainer = [];
 
-  const loadStorage = function () {
-    // LOAD LOCAL STORAGE HERE
+  const loadLocalStorage = function () {
+    todoContainer = getLocalTodos();
+    projectContainer = getLocalProjects();
   };
 
   const addTodo = function (todo) {
     todoContainer.push(todo);
+    updateLocalStorage();
   };
 
   const addProject = function (project) {
     projectContainer.push(project);
+    updateLocalStorage();
   };
 
   const deleteTodo = function (index) {
     todoContainer.splice(index, 1);
+    updateLocalStorage();
   };
 
   const deleteProject = function (id) {
@@ -38,6 +42,7 @@ const storageContainers = (function () {
           (item) => !toBeFiltered.includes(item)
         );
         todoContainer = result;
+        updateLocalStorage();
       }
     });
   };
@@ -71,7 +76,8 @@ const storageContainers = (function () {
     todoContainer[index]['dueDate'] = newDueDate;
     todoContainer[index]['priority'] = newPriority;
     todoContainer[index]['notes'] = newNotes;
-    todoContainer[index]['project'] = Number(newProject);
+    todoContainer[index]['project'] = newProject;
+    updateLocalStorage();
   };
 
   const editProject = function (index, newName) {
@@ -83,6 +89,7 @@ const storageContainers = (function () {
         todo['project'] = newName;
       }
     });
+    updateLocalStorage();
   };
 
   return {
@@ -96,7 +103,7 @@ const storageContainers = (function () {
     editProject,
     getTodoContainer,
     getProjectContainer,
-    loadStorage,
+    loadLocalStorage,
     replaceTodoContainer,
     replaceProjectContainer,
   };

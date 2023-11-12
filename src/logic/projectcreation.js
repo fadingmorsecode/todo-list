@@ -1,4 +1,3 @@
-import { getStoredContainers, storeProjects } from './localstorage';
 import { storageContainers } from './storage';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -13,7 +12,6 @@ const createProject = (name) => {
   const projectName = name;
   const newProject = new project(projectName);
   storageContainers.addProject(newProject);
-  storeProjects();
 };
 
 export { createProject };

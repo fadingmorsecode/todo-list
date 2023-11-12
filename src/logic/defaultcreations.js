@@ -1,6 +1,5 @@
 import { storageContainers } from './storage';
 import { todo } from './itemcreation';
-import { project } from './projectcreation';
 
 export function createDefaults() {
   let defaultTodos = [];

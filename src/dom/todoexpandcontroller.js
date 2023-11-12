@@ -65,6 +65,7 @@ export function expandTodoController(expandedTodo) {
         todoNotes.value,
         todoProject.value
       );
+      console.log(todoProject.value);
 
       let currentlySelected = document.querySelector('.grey');
       if (currentlySelected === document.querySelector('.inbox')) {

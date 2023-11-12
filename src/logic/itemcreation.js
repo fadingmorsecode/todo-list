@@ -1,4 +1,3 @@
-import { storeTodos } from './localstorage';
 import { storageContainers } from './storage';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -31,10 +30,9 @@ const createTodo = (title, description, dueDate, priority, notes, project) => {
     dueDate,
     priority,
     notes,
-    Number(project)
+    project
   );
   storageContainers.addTodo(newTodo);
-  storeTodos();
 };
 
 export { createTodo };
