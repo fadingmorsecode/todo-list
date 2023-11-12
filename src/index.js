@@ -22,14 +22,9 @@ import { loadExpandListener } from './dom/todoexpandlistener';
 import { loadCheckListener } from './dom/checklistener';
 import { loadTodoDeleteListener } from './dom/tododeletelistener';
 import { createDefaults } from './logic/defaultcreations';
+import { checkForLocalStorage } from './logic/localstorage';
 
-storageContainers.loadStorage();
-
-createDefaults();
-
-createProject('music');
-createProject('movies');
-createProject('homework');
+checkForLocalStorage();
 
 loadImages();
 loadNewProjListener();

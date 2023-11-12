@@ -6,12 +6,7 @@ const storageContainers = (function () {
   let projectContainer = [];
 
   const loadStorage = function () {
-    if (getStoredTodos() !== null && getStoredTodos().length > 0) {
-      todoContainer = getStoredTodos();
-    }
-    if (getStoredProjects() !== null && getStoredProjects().length > 0) {
-      projectContainer = getStoredProjects();
-    }
+    // LOAD LOCAL STORAGE HERE
   };
 
   const addTodo = function (todo) {
@@ -54,6 +49,14 @@ const storageContainers = (function () {
     return projectContainer;
   };
 
+  const replaceTodoContainer = function (newContainer) {
+    todoContainer = newContainer;
+  };
+
+  const replaceProjectContainer = function (newContainer) {
+    projectContainer = newContainer;
+  };
+
   const editTodo = function (
     index,
     newTitle,
@@ -94,6 +97,8 @@ const storageContainers = (function () {
     getTodoContainer,
     getProjectContainer,
     loadStorage,
+    replaceTodoContainer,
+    replaceProjectContainer,
   };
 })();
 

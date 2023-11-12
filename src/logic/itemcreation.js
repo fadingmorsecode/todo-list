@@ -1,9 +1,9 @@
 import { storeTodos } from './localstorage';
 import { storageContainers } from './storage';
+import { v4 as uuidv4 } from 'uuid';
 
 // Default state of of checked status is unchecked.
 export class todo {
-  static counter = -1;
   constructor(title, description, dueDate, priority, notes, project) {
     this.title = title;
     this.description = description;
@@ -12,7 +12,7 @@ export class todo {
     this.notes = notes;
     this.project = project;
     this.checkState = false;
-    this.id = ++this.constructor.counter;
+    this.id = uuidv4();
   }
 }
 

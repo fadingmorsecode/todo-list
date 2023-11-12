@@ -1,11 +1,11 @@
 import { getStoredContainers, storeProjects } from './localstorage';
 import { storageContainers } from './storage';
+import { v4 as uuidv4 } from 'uuid';
 
-class project {
-  static counter = -1;
+export class project {
   constructor(title) {
     this.title = title;
-    this.id = ++this.constructor.counter;
+    this.id = uuidv4();
   }
 }
 
