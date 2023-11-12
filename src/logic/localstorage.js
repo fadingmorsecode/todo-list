@@ -5,10 +5,8 @@ import { todo } from './itemcreation';
 // On page load - load localStorage if it exists or defaults if it doesn't
 export function checkForLocalStorage() {
   if (localStorage.getItem('todos') || localStorage.getItem('projects')) {
-    console.log('local storage exists');
     storageContainers.loadLocalStorage();
   } else {
-    console.log('defaults needs to be loaded');
     createDefaults();
   }
 }
